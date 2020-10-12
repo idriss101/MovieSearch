@@ -18,7 +18,6 @@ export default class Header extends Component {
       <div className='Header'>
         <div className='Header-container'>
           <Link to='/'>
-            {" "}
             <h1>
               <i className='fas fa-film'></i>
               <a href='/'>Movie Search</a>
