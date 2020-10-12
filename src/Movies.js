@@ -8,10 +8,14 @@ import Display from "./Display";
 import { v4 as uuidv4 } from "uuid";
 
 const styles = {
-  Movies: {
+  MoviesDisplay: {
     display: "flex",
-    flexDirection: "column",
-    background: "rgb(32, 50, 67)",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    width: "90%",
+    height: "100vh",
+    margin: "0 auto",
     background: `radial-gradient(
       circle,
       rgba(32, 50, 67, 1) 0%,
@@ -19,14 +23,10 @@ const styles = {
     )`,
     color: "white",
     position: "fixed",
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    overflow: "auto",
-    paddingBottom: "100px",
+    overflow: "scroll",
     height: "100vh",
     width: "100%",
+    paddingTop: "3rem",
     "& h2": {
       textTransform: "uppercase",
       fontSize: "2rem",
@@ -35,21 +35,11 @@ const styles = {
   },
   MoviesList: {
     display: "grid",
-    width: (state) => (state.selectedMovie ? "40%" : "100%"),
+    width: (state) => (state.selectedMovie !== "" ? "100%" : "40%"),
     gridTemplateColumns: (state) =>
-      state.selectedMovie ? "repeat(3 , 30%)" : "repeat(4, 20%)",
-    alignItems: "enter",
+      state.selectedMovie !== "" ? "repeat(4 , 20%)" : "repeat(3, 30%)",
+    alignItems: "center",
     gridGap: "2%",
-  },
-  MoviesDisplay: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    width: "90%",
-    height: "100vh",
-    margin: "0 auto",
   },
   MoviesDetails: {
     width: "50%",
@@ -117,7 +107,7 @@ class Movies extends Component {
       />
     ));
     return (
-      <div className={this.props.classes.Movies}>
+      <div>
         <Header submit={this.handleSubmit} />
         <div className={this.props.classes.MoviesDisplay}>
           <div className={this.props.classes.MoviesList}>{movies}</div>
