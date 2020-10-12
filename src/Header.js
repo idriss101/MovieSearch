@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Header.css";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/HeaderStyles";
 
@@ -28,7 +27,7 @@ class Header extends Component {
             <input
               type='text'
               className={this.props.classes.Search}
-              id='search'
+              name='search'
               onChange={this.handleChange}
               value={this.state.search}
               placeholder=' Search for a movie'

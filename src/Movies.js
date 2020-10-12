@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { withStyles } from "@material-ui/core/styles";
 import Movie from "./Movie";
-import "./Movies.css";
 import Header from "./Header";
 import Display from "./Display";
 import { v4 as uuidv4 } from "uuid";

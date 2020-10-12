@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Youtube from "react-youtube";
-import "./Display.css";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/DisplayStyles";
 
