@@ -7,7 +7,7 @@ export default class Display extends Component {
       height: "550",
       width: "100%",
       playerVars: {
-        autoplay: 1,
+        autoplay: 0,
       },
     };
     return (
