@@ -1,12 +1,63 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { withStyles } from "@material-ui/core/styles";
 import Movie from "./Movie";
 import "./Movies.css";
 import Header from "./Header";
 import Display from "./Display";
 import { v4 as uuidv4 } from "uuid";
 
-export default class Movies extends Component {
+const styles = {
+  Movies: {
+    display: "flex",
+    flexDirection: "column",
+    background: "rgb(32, 50, 67)",
+    background: `radial-gradient(
+      circle,
+      rgba(32, 50, 67, 1) 0%,
+      rgba(32, 34, 38, 1) 95%
+    )`,
+    color: "white",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    overflow: "auto",
+    paddingBottom: "100px",
+    height: "100vh",
+    width: "100%",
+    "& h2": {
+      textTransform: "uppercase",
+      fontSize: "2rem",
+      marginLeft: "60px",
+    },
+  },
+  MoviesList: {
+    display: "grid",
+    width: (state) => (state.selectedMovie ? "40%" : "100%"),
+    gridTemplateColumns: (state) =>
+      state.selectedMovie ? "repeat(3 , 30%)" : "repeat(4, 20%)",
+    alignItems: "enter",
+    gridGap: "2%",
+  },
+  MoviesDisplay: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    width: "90%",
+    height: "100vh",
+    margin: "0 auto",
+  },
+  MoviesDetails: {
+    width: "50%",
+    maxHeight: "50%",
+  },
+};
+
+class Movies extends Component {
   state = {
     movies: [],
     selectedMovie: "",
@@ -66,11 +117,11 @@ export default class Movies extends Component {
       />
     ));
     return (
-      <div className='Movies'>
+      <div className={this.props.classes.Movies}>
         <Header submit={this.handleSubmit} />
-        <div className='Movies-display'>
-          <div className='Movies-list'>{movies}</div>
-          <div className='Movies-details'>
+        <div className={this.props.classes.MoviesDisplay}>
+          <div className={this.props.classes.MoviesList}>{movies}</div>
+          <div className={this.props.classes.MoviesDetails}>
             {this.state.selectedMovie && (
               <Display movie={this.state.selectedMovie} />
             )}
@@ -80,3 +131,4 @@ export default class Movies extends Component {
     );
   }
 }
+export default withStyles(styles)(Movies);
