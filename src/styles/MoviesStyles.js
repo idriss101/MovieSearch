@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const styles = {
   MoviesDisplay: {
     display: "flex",
@@ -21,6 +23,7 @@ const styles = {
       fontSize: "2rem",
       marginLeft: "60px",
     },
+    [sizes.down("xs")]: {},
   },
   MoviesList: {
     display: "grid",
@@ -28,6 +31,10 @@ const styles = {
     gridTemplateColumns: "repeat(3, 30%)",
     alignItems: "center",
     gridGap: "2%",
+    [sizes.down("xs")]: {
+      gridTemplateColumns: "repeat(1, 100%)",
+      width: "100%",
+    },
   },
   MoviesDetails: {
     width: "40%",

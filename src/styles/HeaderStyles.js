@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const styles = {
   Header: {
     height: "6%",
@@ -6,16 +8,10 @@ const styles = {
     backgroundColor: "black",
     color: "white",
     padding: "10px",
-    "& img": {
-      height: "60px",
-      width: "60px",
-      borderRadius: "100%",
-      objectFit: "cover",
-    },
   },
   HeaderContainer: {
     height: "100%",
-    width: "80%",
+    width: "100%",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
@@ -23,14 +19,21 @@ const styles = {
     "& h1": {
       textTransform: "uppercase",
       cursor: "pointer",
+      [sizes.down("xs")]: {
+        fontSize: "1.5rem",
+      },
+    },
+    [sizes.down("xs")]: {
+      flexDirection: "column",
     },
   },
   Search: {
     border: "none",
-    width: "450px",
+    width: "100%",
     height: "40px",
     backgroundColor: "#262626",
     color: "white",
+    textAlign: "center",
     fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif`,
@@ -40,6 +43,9 @@ const styles = {
     "&:focus": {
       outline: "none",
       border: "none",
+    },
+    [sizes.down("xs")]: {
+      padding: "10px",
     },
   },
 };
