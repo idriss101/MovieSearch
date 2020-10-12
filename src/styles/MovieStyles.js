@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const styles = {
   Movie: {
     cursor: "pointer",
@@ -15,12 +17,19 @@ const styles = {
       borderRadius: "10px",
       display: "block",
       margin: "0 auto",
+      [sizes.down("xs")]: {
+        maxWidth: "250px",
+        minHeight: "200px",
+      },
     },
     "& p": {
       textAlign: "center",
       fontSize: "1.5rem",
       letterSpacing: "2px",
       marginTop: "10px",
+    },
+    [sizes.down("xs")]: {
+      pointerEvents: "none",
     },
   },
 };

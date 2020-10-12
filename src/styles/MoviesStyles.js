@@ -17,7 +17,7 @@ const styles = {
     color: "white",
     overflow: "scroll",
     paddingTop: "3rem",
-    paddingBottom: "15rem",
+    paddingBottom: "50px",
     "& h2": {
       textTransform: "uppercase",
       fontSize: "2rem",
@@ -34,6 +34,7 @@ const styles = {
     [sizes.down("xs")]: {
       gridTemplateColumns: "repeat(1, 100%)",
       width: "100%",
+      gridGap: "1%",
     },
   },
   MoviesDetails: {
