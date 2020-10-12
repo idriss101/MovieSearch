@@ -31,9 +31,13 @@ const styles = {
   MoviesList: {
     display: "grid",
     width: "40%",
-    gridTemplateColumns: "repeat(3, 30%)",
+    gridTemplateColumns: "repeat(3, 40%)",
     alignSelf: "center",
     gridGap: "1%",
+    [sizes.down("lg")]: {
+      gridTemplateColumns: "repeat(2, 50%)",
+      gridGap: "0",
+    },
     [sizes.down("md")]: {
       gridTemplateColumns: "repeat(2, 50%)",
       width: "100%",

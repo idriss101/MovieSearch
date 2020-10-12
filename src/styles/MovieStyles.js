@@ -11,7 +11,7 @@ const styles = {
       width: "80%",
       // maxWidth: " 250px",
       // maxHeight: "400px",
-      minHeight: "400px",
+      minHeight: "300px",
       objectFit: "cover",
       borderRadius: "10px",
       display: "block",
