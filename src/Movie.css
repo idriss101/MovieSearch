@@ -1,0 +1,28 @@
+.Movie img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 400px;
+  min-height: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.Movie p {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  /* margin-right: 50px; */
+  margin-top: 10px;
+}
+
+.Movie {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.Movie:hover {
+  transform: translateY(-10px);
+}
