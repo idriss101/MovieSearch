@@ -17,12 +17,10 @@ export default class Header extends Component {
     return (
       <div className='Header'>
         <div className='Header-container'>
-          <Link to='/'>
-            <h1>
-              <i className='fas fa-film'></i>
-              <a href='/'>Movie Search</a>
-            </h1>
-          </Link>
+          <h1 onClick={() => this.props.resetMovies()}>
+            <i className='fas fa-film'></i>
+            Movie Search
+          </h1>
 
           <form onSubmit={this.handleSubmit}>
             <input

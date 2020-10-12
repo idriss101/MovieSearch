@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import "./Movie.css";
-export default class Movie extends Component {
+export default class Movie extends PureComponent {
   state = {
     clicked: false,
   };
@@ -9,7 +9,8 @@ export default class Movie extends Component {
     this.props.show(this.props.id);
   };
 
-  clicked = () => {
+  clicked = (e) => {
+    e.preventDefault();
     this.setState({
       clicked: true,
     });

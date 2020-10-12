@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route exact path='/' render={() => <Movies />} />
+        <Route path='/' render={(routerProps) => <Movies {...routerProps} />} />
       </Switch>
     </div>
   );

@@ -77,6 +77,16 @@ class Movies extends Component {
       );
     });
   };
+  resetMovies = () => {
+    let MOVIEURL = "https://imdb-api.com/en/API/MostPopularMovies/k_1b5ua5kx";
+    axios.get(MOVIEURL).then((res) => {
+      let data = res.data.items.slice(0, 12);
+      this.setState((st) => ({
+        movies: data,
+        selectedMovie: "",
+      }));
+    });
+  };
 
   showInfo = (id) => {
     let MOVIEURL = `https://imdb-api.com/en/API/Title/k_1b5ua5kx/${id}`;
@@ -106,7 +116,7 @@ class Movies extends Component {
     ));
     return (
       <div>
-        <Header submit={this.handleSubmit} />
+        <Header submit={this.handleSubmit} resetMovies={this.resetMovies} />
         <div className={this.props.classes.MoviesDisplay}>
           <div className={this.props.classes.MoviesList}>{movies}</div>
           <div className={this.props.classes.MoviesDetails}>
