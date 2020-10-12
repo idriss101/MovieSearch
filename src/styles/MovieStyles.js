@@ -8,15 +8,18 @@ const styles = {
       transform: "translateY(-10px)",
     },
     "& img": {
-      width: "100%",
-      maxWidth: " 250px",
-      maxHeight: "400px",
+      width: "80%",
+      // maxWidth: " 250px",
+      // maxHeight: "400px",
       minHeight: "400px",
-      height: "auto",
       objectFit: "cover",
       borderRadius: "10px",
       display: "block",
       margin: "0 auto",
+      [sizes.down("md")]: {
+        maxWidth: "250px",
+        minHeight: "250px",
+      },
       [sizes.down("xs")]: {
         maxWidth: "250px",
         minHeight: "200px",
@@ -27,6 +30,9 @@ const styles = {
       fontSize: "1.5rem",
       letterSpacing: "2px",
       marginTop: "10px",
+    },
+    [sizes.down("md")]: {
+      pointerEvents: "none",
     },
     [sizes.down("xs")]: {
       pointerEvents: "none",

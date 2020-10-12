@@ -11,7 +11,7 @@ const styles = {
   },
   HeaderContainer: {
     height: "100%",
-    width: "100%",
+    width: "90%",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
@@ -22,8 +22,14 @@ const styles = {
       [sizes.down("xs")]: {
         fontSize: "1.5rem",
       },
+      [sizes.down("md")]: {
+        fontSize: "2rem",
+      },
     },
     [sizes.down("xs")]: {
+      flexDirection: "column",
+    },
+    [sizes.down("md")]: {
       flexDirection: "column",
     },
   },
@@ -47,6 +53,7 @@ const styles = {
     [sizes.down("xs")]: {
       padding: "10px",
     },
+    [sizes.down("md")]: {},
   },
 };
 

@@ -23,14 +23,22 @@ const styles = {
       fontSize: "2rem",
       marginLeft: "60px",
     },
-    [sizes.down("xs")]: {},
+    [sizes.down("md")]: {
+      justifyContent: "center",
+      alignItems: "center",
+    },
   },
   MoviesList: {
     display: "grid",
     width: "40%",
     gridTemplateColumns: "repeat(3, 30%)",
-    alignItems: "center",
-    gridGap: "2%",
+    alignSelf: "center",
+    gridGap: "1%",
+    [sizes.down("md")]: {
+      gridTemplateColumns: "repeat(2, 50%)",
+      width: "100%",
+      gridGap: "0",
+    },
     [sizes.down("xs")]: {
       gridTemplateColumns: "repeat(1, 100%)",
       width: "100%",
