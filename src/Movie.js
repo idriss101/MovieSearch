@@ -1,33 +1,7 @@
 import React, { PureComponent } from "react";
 import "./Movie.css";
 import { withStyles } from "@material-ui/core/styles";
-
-const styles = {
-  Movie: {
-    cursor: "pointer",
-    transition: "all 0.3s ease-in-out",
-    "&:hover": {
-      transform: "translateY(-10px)",
-    },
-    "& img": {
-      width: "100%",
-      maxWidth: " 250px",
-      maxHeight: "400px",
-      minHeight: "400px",
-      height: "auto",
-      objectFit: "cover",
-      borderRadius: "10px",
-      display: "block",
-      margin: "0 auto",
-    },
-    "& p": {
-      textAlign: "center",
-      fontSize: "1.5rem",
-      letterSpacing: "2px",
-      marginTop: "10px",
-    },
-  },
-};
+import styles from "./styles/MovieStyles";
 
 class Movie extends PureComponent {
   state = {
