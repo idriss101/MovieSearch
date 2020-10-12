@@ -1,38 +1,30 @@
 .Header {
-  height: 6%;
+  /* height: 6%;
   width: 100%;
   box-shadow: 0px 15px 10px -15px #111;
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 10px; */
 }
 
 .Header img {
-  height: 60px;
+  /* height: 60px;
   width: 60px;
   border-radius: 100%;
-  object-fit: cover;
+  object-fit: cover; */
 }
 
 .Header-container {
-  height: 100%;
+  /* height: 100%;
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-left: -200px; */
-  margin: 0 auto;
+  margin: 0 auto; */
 }
 .Header-container h1 {
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.Header-container a {
-  color: white;
-  text-decoration: none;
-}
-.Header-container a:visited {
-  color: white;
+  /* text-transform: uppercase;
+  cursor: pointer; */
 }
 
 .fa-film {
@@ -40,7 +32,7 @@
 }
 
 #search {
-  border: none;
+  /* border: none;
   width: 450px;
   height: 40px;
   background-color: #262626;
@@ -51,9 +43,9 @@
 
   font-size: 1.5rem;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 10px; */
 }
 #search:focus {
-  outline: none;
-  border: none;
+  /* outline: none;
+  border: none; */
 }
