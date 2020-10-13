@@ -32,10 +32,10 @@ const styles = {
       marginTop: "10px",
     },
     [sizes.down("md")]: {
-      pointerEvents: "none",
+      // pointerEvents: "none",
     },
     [sizes.down("xs")]: {
-      pointerEvents: "none",
+      // pointerEvents: "none",
     },
   },
 };

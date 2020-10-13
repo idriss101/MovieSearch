@@ -49,6 +49,11 @@ class Movies extends Component {
       }));
     });
   };
+  resetSelectedMovie = () => {
+    this.setState({
+      selectedMovie: "",
+    });
+  };
 
   showInfo = (id) => {
     let MOVIEURL = `https://imdb-api.com/en/API/Title/k_1b5ua5kx/${id}`;
@@ -83,7 +88,10 @@ class Movies extends Component {
           <div className={this.props.classes.MoviesList}>{movies}</div>
           <div className={this.props.classes.MoviesDetails}>
             {this.state.selectedMovie && (
-              <Display movie={this.state.selectedMovie} />
+              <Display
+                movie={this.state.selectedMovie}
+                reset={this.resetSelectedMovie}
+              />
             )}
           </div>
         </div>

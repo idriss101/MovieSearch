@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Youtube from "react-youtube";
 import { withStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 import styles from "./styles/DisplayStyles";
 
 class Display extends Component {
@@ -23,6 +24,13 @@ class Display extends Component {
           <p className={this.props.classes.DisplayPlot}>
             {this.props.movie.plot}
           </p>
+          <Button
+            variant='contained'
+            color='secondary'
+            onClick={() => this.props.reset()}
+          >
+            Done
+          </Button>
         </div>
       </div>
     );
