@@ -15,21 +15,23 @@ class Header extends Component {
     this.props.submit(e, this.state.search);
   };
   render() {
+    const { classes, resetMovies } = this.props;
+    const { search } = this.state;
     return (
-      <div className={this.props.classes.Header}>
-        <div className={this.props.classes.HeaderContainer}>
-          <h1 onClick={() => this.props.resetMovies()}>
-            <i className='fas fa-film'></i>
+      <div className={classes.Header}>
+        <div className={classes.HeaderContainer}>
+          <h1 onClick={() => resetMovies()}>
+            <i className='fas fa-film' style={{ marginRight: "10px" }}></i>
             Movie Search
           </h1>
 
           <form onSubmit={this.handleSubmit}>
             <input
               type='text'
-              className={this.props.classes.Search}
+              className={classes.Search}
               name='search'
               onChange={this.handleChange}
-              value={this.state.search}
+              value={search}
               placeholder=' Search for a movie'
             />
           </form>

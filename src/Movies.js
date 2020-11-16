@@ -81,17 +81,16 @@ class Movies extends Component {
         show={this.showInfo}
       />
     ));
+    const { classes } = this.props;
+    const { selectedMovie } = this.state;
     return (
       <div>
         <Header submit={this.handleSubmit} resetMovies={this.resetMovies} />
-        <div className={this.props.classes.MoviesDisplay}>
-          <div className={this.props.classes.MoviesList}>{movies}</div>
-          <div className={this.props.classes.MoviesDetails}>
-            {this.state.selectedMovie && (
-              <Display
-                movie={this.state.selectedMovie}
-                reset={this.resetSelectedMovie}
-              />
+        <div className={classes.MoviesDisplay}>
+          <div className={classes.MoviesList}>{movies}</div>
+          <div className={classes.MoviesDetails}>
+            {selectedMovie && (
+              <Display movie={selectedMovie} reset={this.resetSelectedMovie} />
             )}
           </div>
         </div>

@@ -15,9 +15,9 @@ const styles = {
         rgba(32, 34, 38, 1) 95%
       )`,
     color: "white",
-    overflow: "scroll",
+    overflow: "auto",
     paddingTop: "3rem",
-    paddingBottom: "50px",
+    paddingBottom: "150px",
     "& h2": {
       textTransform: "uppercase",
       fontSize: "2rem",

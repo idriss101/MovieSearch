@@ -13,22 +13,17 @@ class Display extends Component {
         autoplay: 0,
       },
     };
+    const { classes, movie, reset } = this.props;
     return (
-      <div className={this.props.classes.Display}>
-        <Youtube opts={opts} videoId={this.props.movie.video} />
-        <div className={this.props.classes.DisplayText}>
-          <h3>{this.props.movie.title}</h3>
+      <div className={classes.Display}>
+        <Youtube opts={opts} videoId={movie.video} />
+        <div className={classes.DisplayText}>
+          <h3>{movie.title}</h3>
           <p>
-            {this.props.movie.year} &#183; {this.props.movie.runtimeStr}
+            {movie.year} &#183; {movie.runtimeStr}
           </p>
-          <p className={this.props.classes.DisplayPlot}>
-            {this.props.movie.plot}
-          </p>
-          <Button
-            variant='contained'
-            color='secondary'
-            onClick={() => this.props.reset()}
-          >
+          <p className={classes.DisplayPlot}>{movie.plot}</p>
+          <Button variant='contained' color='secondary' onClick={() => reset()}>
             Done
           </Button>
         </div>

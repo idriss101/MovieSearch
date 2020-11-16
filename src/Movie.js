@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/MovieStyles";
 
@@ -19,11 +18,12 @@ class Movie extends PureComponent {
     });
   };
   render() {
+    const { classes, title, img } = this.props;
     return (
-      <div className={this.props.classes.Movie} onClick={this.clicked}>
+      <div className={classes.Movie} onClick={this.clicked}>
         <div onClick={this.handleClick}>
-          <img src={this.props.img} alt='' />
-          <p>{this.props.title}</p>
+          <img src={img} alt='' />
+          <p>{title}</p>
         </div>
       </div>
     );
