@@ -11,7 +11,7 @@ Search up your favorite Movies!
 * [Inspiration](#inspiration)
 
 ## General info
-A website to lok up anyu movie you want and get a short plot description along with a trailer of the movie
+A website to look up any movie you want and get a short plot description along with a trailer of the movie
 
 ## Screenshots
 [![screenshot.png](https://i.postimg.cc/SKbLXpt3/screenshot.png)](https://postimg.cc/QFSKPvDJ)
