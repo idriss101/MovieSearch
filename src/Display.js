@@ -3,6 +3,7 @@ import Youtube from "react-youtube";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import styles from "./styles/DisplayStyles";
+import "./styles/loader.css";
 
 class Display extends Component {
   render() {
@@ -13,7 +14,23 @@ class Display extends Component {
         autoplay: 0,
       },
     };
-    const { classes, movie, reset } = this.props;
+    const { classes, movie, reset, loading } = this.props;
+
+    if (loading) {
+      return (
+        <div class='lds-roller'>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      );
+    }
+
     return (
       <div className={classes.Display}>
         <Youtube opts={opts} videoId={movie.video} />

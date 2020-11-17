@@ -65,6 +65,7 @@ class Movies extends Component {
       axios.get(TRAILERURL).then((res) => {
         this.setState((st) => ({
           selectedMovie: { ...st.selectedMovie, video: res.data.videoId },
+          loading: false,
         }));
       });
     });
@@ -82,7 +83,7 @@ class Movies extends Component {
       />
     ));
     const { classes } = this.props;
-    const { selectedMovie } = this.state;
+    const { selectedMovie, loading } = this.state;
     return (
       <div>
         <Header submit={this.handleSubmit} resetMovies={this.resetMovies} />
@@ -90,7 +91,11 @@ class Movies extends Component {
           <div className={classes.MoviesList}>{movies}</div>
           <div className={classes.MoviesDetails}>
             {selectedMovie && (
-              <Display movie={selectedMovie} reset={this.resetSelectedMovie} />
+              <Display
+                movie={selectedMovie}
+                reset={this.resetSelectedMovie}
+                loading={loading}
+              />
             )}
           </div>
         </div>
