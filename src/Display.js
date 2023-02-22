@@ -18,7 +18,7 @@ class Display extends Component {
 
     if (loading) {
       return (
-        <div class='lds-roller'>
+        <div className="lds-roller">
           <div></div>
           <div></div>
           <div></div>
@@ -40,7 +40,7 @@ class Display extends Component {
             {movie.year} &#183; {movie.runtimeStr}
           </p>
           <p className={classes.DisplayPlot}>{movie.plot}</p>
-          <Button variant='contained' color='secondary' onClick={() => reset()}>
+          <Button variant="contained" color="secondary" onClick={() => reset()}>
             Done
           </Button>
         </div>
